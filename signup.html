@@ -58,13 +58,13 @@
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <header class="sticky top-0 z-50 w-full border-b border-white/5 bg-dark-charcoal/80 backdrop-blur-md">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <a href="home.html" class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2 relative z-50">
                     <span class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
                     <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
                 </a>
                 <nav class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-                        href="home.html">Home</a>
+                        href="index.html">Home</a>
                     <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
                         href="about.html">About</a>
                     <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
@@ -74,7 +74,7 @@
                     <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
                         href="contactus.html">Contact Us</a>
                 </nav>
-                <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-4">
                     <a href="login.html"
                         class="hidden sm:inline-flex text-sm font-bold px-4 py-2 text-slate-300 hover:text-white">Log
                         In</a>
@@ -83,7 +83,48 @@
                         Sign Up
                     </a>
                 </div>
+                <button id="mobile-menu-btn" class="md:hidden flex items-center text-white relative z-50">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
+
+            <div id="mobile-menu"
+                class="fixed top-0 right-0 w-64 h-screen bg-dark-charcoal/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-start p-8 gap-6 md:hidden border-l border-white/10 shadow-2xl pt-24 overflow-y-auto">
+                <a href="index.html"
+                    class="text-lg font-bold text-white hover:text-primary transition-colors w-full border-b border-white/5 pb-2">Home</a>
+                <a href="about.html"
+                    class="text-lg font-bold text-white hover:text-primary transition-colors w-full border-b border-white/5 pb-2">About</a>
+                <a href="product.html"
+                    class="text-lg font-bold text-white hover:text-primary transition-colors w-full border-b border-white/5 pb-2">Product</a>
+                <a href="pricing.html"
+                    class="text-lg font-bold text-white hover:text-primary transition-colors w-full border-b border-white/5 pb-2">Pricing</a>
+                <a href="contactus.html"
+                    class="text-lg font-bold text-white hover:text-primary transition-colors w-full border-b border-white/5 pb-2">Contact
+                    Us</a>
+                <div class="flex flex-col gap-4 mt-4 w-full">
+                    <a href="login.html"
+                        class="w-full text-center text-sm font-bold py-3 text-slate-300 hover:text-white border border-white/10 rounded-xl">Log
+                        In</a>
+                    <a href="signup.html"
+                        class="w-full text-center gradient-glow text-white text-sm font-bold py-3 rounded-xl hover:scale-105 transition-all">Sign
+                        Up</a>
+                </div>
+            </div>
+            <script>
+                document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+                    const menu = document.getElementById('mobile-menu');
+                    const icon = this.querySelector('span');
+                    if (menu.classList.contains('translate-x-full')) {
+                        menu.classList.remove('translate-x-full');
+                        menu.classList.add('translate-x-0');
+                        icon.textContent = 'close';
+                    } else {
+                        menu.classList.add('translate-x-full');
+                        menu.classList.remove('translate-x-0');
+                        icon.textContent = 'menu';
+                    }
+                });
+            </script>
         </header>
 
         <main class="flex-1 flex items-center justify-center py-16 px-6 relative">
@@ -194,62 +235,23 @@
             </div>
         </main>
 
-        <footer class="bg-dark-charcoal border-t border-white/5 py-24 px-6">
-            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
-                <div class="col-span-2 lg:col-span-2 space-y-8">
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
-                        <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
-                    </div>
-                    <p class="text-slate-500 text-base max-w-xs leading-relaxed">The industrial knowledge platform for
-                        the next generation of business intelligence.</p>
-                    <div class="flex gap-4">
-                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
-                            href="#">
-                            <span class="material-symbols-outlined">alternate_email</span>
-                        </a>
-                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
-                            href="#">
-                            <span class="material-symbols-outlined text-xl">rss_feed</span>
-                        </a>
-                    </div>
+        <footer class="bg-dark-charcoal border-t border-white/5 py-16 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                    <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
                 </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Platform</h5>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a class="hover:text-primary transition-colors" href="#">Neural Engine</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Connectors</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Security Stack</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">API Docs</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Solutions</h5>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a class="hover:text-primary transition-colors" href="#">Retail AI</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Manufacturing</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Legal Intelligence</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Financial</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Company</h5>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
-                    </ul>
+                <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-slate-400">
+                    <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                    <a class="hover:text-primary transition-colors" href="product.html">Product</a>
+                    <a class="hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+                    <a class="hover:text-primary transition-colors" href="contactus.html">Contact Us</a>
                 </div>
             </div>
             <div
-                class="max-w-7xl mx-auto pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-xs text-slate-500 tracking-widest uppercase font-bold">
-                <p>© 2024 ASKLayer Engineering. Built for scale.</p>
-                <div class="flex gap-10">
-                    <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
-                    <a class="hover:text-white transition-colors" href="#">Compliance</a>
-                </div>
+                class="max-w-7xl mx-auto pt-8 mt-12 border-t border-white/5 text-center text-xs text-slate-500 tracking-widest uppercase font-bold">
+                <p>© 2026-27 Team ASKLayer -CMS B-School. Built for scale.</p>
             </div>
         </footer>
     </div>

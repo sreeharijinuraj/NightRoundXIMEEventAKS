@@ -19,7 +19,7 @@ def get_block(text, tag):
 
 def update_files():
     # Read source file
-    src_file = r'd:\NightRound - TeamAKS\home.html'
+    src_file = r'd:\NightRound - TeamAKS\index.html'
     with open(src_file, 'r', encoding='utf-8') as f:
         src_content = f.read()
 
@@ -27,7 +27,7 @@ def update_files():
     footer_block = get_block(src_content, 'footer')
 
     if not header_block or not footer_block:
-        print("Error: Could not extract header or footer from home.html")
+        print("Error: Could not extract header or footer from index.html")
         return
 
     base_dir = r'd:\NightRound - TeamAKS'
