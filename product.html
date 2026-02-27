@@ -1,0 +1,323 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+  --primary: #1313ec;
+  --background-dark: #050510;
+  --navy-deep: #0a0a1f;
+  --silver-text: #a1a1aa;
+}
+@layer base {
+  body {
+    @apply bg-[#050510] text-slate-100 antialiased;
+  }
+}
+</style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-dark": "#050510",
+                        "navy-deep": "#0a0a1f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>About ASKLayer - Innovation Hub</title>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="sticky top-0 z-50 w-full border-b border-white/5 bg-dark-charcoal/80 backdrop-blur-md">
+                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <a href="home.html" class="flex items-center gap-2">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                        <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-10">
+                        <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                            href="home.html">Home</a>
+                        <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                            href="product.html">Product</a>
+                        <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                            href="pricing.html">Pricing</a>
+                        <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                            href="contactus.html">Contact Us</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a href="login.html"
+                            class="hidden sm:inline-flex text-sm font-bold px-4 py-2 text-slate-300 hover:text-white">Log
+                            In</a>
+                        <a href="signup.html"
+                            class="inline-flex items-center justify-center gradient-glow text-white text-sm font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-all">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-1 flex-col">
+                <div class="px-6 lg:px-40 py-10 lg:py-24 bg-gradient-to-b from-navy-deep to-background-dark">
+                    <div class="@container">
+                        <div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-8 text-center relative overflow-hidden border border-white/10"
+                            style='background-image: linear-gradient(rgba(5, 5, 16, 0.7), rgba(5, 5, 16, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQT6uKWkWO5yllwDBUny8Mx0Ay-BRKBjUb0jpaJ4RYGAbMQvDTNR2e7K48mZeUTBuIuVnwTCr5dWc4s56__lDWIdzFpujUiClqqTXwyoifdvsaSyQefecE59nD4gbRdUkVdl7Jkf9NRJF89H85WnBE5lcIdQ95OclEkRCsodtONw7xJWlietRHSm1hhlLy2mvGP8n7j8RDc0VzqOczlDAZzho9V64C_8qCevErMGk4gNos6BDkBHe3w0qCoToXrZfIE1EhlwKpE9c");'>
+                            <div class="flex flex-col gap-6 max-w-[850px] z-10">
+                                <div class="flex justify-center">
+                                    <span
+                                        class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">Our
+                                        Mission</span>
+                                </div>
+                                <h1
+                                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] lg:text-7xl">
+                                    Accelerating Intelligence across the Enterprise
+                                </h1>
+                                <p
+                                    class="text-slate-300 text-lg font-normal leading-relaxed lg:text-xl max-w-2xl mx-auto">
+                                    We're on a mission to eliminate information silos. By building AI assistants that
+                                    deeply understand your business data, we turn institutional knowledge into instant
+                                    action.
+                                </p>
+                                <div class="mt-8">
+                                    <button
+                                        class="inline-flex items-center justify-center rounded-lg h-14 px-10 bg-white text-background-dark text-base font-bold leading-normal hover:bg-slate-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                                        Our Story
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]">
+                            </div>
+                            <div
+                                class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 lg:px-40 py-24 bg-navy-deep relative overflow-hidden">
+                    <div class="max-w-[1200px] mx-auto relative z-10">
+                        <div class="flex flex-col gap-6 mb-20 text-center items-center">
+                            <span class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Future State</span>
+                            <h2
+                                class="text-white tracking-tight text-3xl font-bold leading-tight lg:text-6xl max-w-[900px]">
+                                High-Contrast Innovation for a New Era of Productivity
+                            </h2>
+                            <p class="text-slate-400 text-lg font-normal leading-relaxed max-w-[750px]">
+                                Silver-grade precision meets enterprise-scale AI. We are building the foundational layer
+                                for companies that value speed, security, and the power of their own data.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div
+                                class="flex flex-col gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-sm relative group hover:border-primary/50 transition-all duration-500 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <div
+                                    class="text-primary bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-2 border border-primary/20 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-3xl">database</span>
+                                </div>
+                                <h3 class="text-white text-2xl font-bold">Unified Knowledge</h3>
+                                <p
+                                    class="text-slate-400 text-base leading-relaxed group-hover:text-slate-300 transition-colors">
+                                    Connect every fragmented data stream—from internal wikis to secure databases—into a
+                                    single, high-fidelity source of truth.
+                                </p>
+                            </div>
+                            <div
+                                class="flex flex-col gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-sm relative group hover:border-primary/50 transition-all duration-500 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <div
+                                    class="text-primary bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-2 border border-primary/20 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-3xl">bolt</span>
+                                </div>
+                                <h3 class="text-white text-2xl font-bold">Instant Answers</h3>
+                                <p
+                                    class="text-slate-400 text-base leading-relaxed group-hover:text-slate-300 transition-colors">
+                                    Slash discovery time with RAG-optimized retrieval that delivers silver-standard
+                                    accuracy in milliseconds.
+                                </p>
+                            </div>
+                            <div
+                                class="flex flex-col gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-sm relative group hover:border-primary/50 transition-all duration-500 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <div
+                                    class="text-primary bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-2 border border-primary/20 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-3xl">shield_person</span>
+                                </div>
+                                <h3 class="text-white text-2xl font-bold">Secure AI</h3>
+                                <p
+                                    class="text-slate-400 text-base leading-relaxed group-hover:text-slate-300 transition-colors">
+                                    Fortress-like encryption for the modern hub. Your proprietary data never trains
+                                    public models, guaranteed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                        style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 40px 40px;">
+                    </div>
+                </div>
+                <div class="px-6 lg:px-40 py-24 bg-background-dark">
+                    <div class="max-w-[1200px] mx-auto">
+                        <div class="flex flex-col items-center text-center gap-6 mb-20">
+                            <h2 class="text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight">The
+                                Team Behind ASKLayer</h2>
+                            <p class="text-slate-400 text-lg max-w-[650px]">Our leadership brings together a product
+                                which can be used my any company to fullfill their business intelligence needs.
+                                needs.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="relative w-full aspect-[4/5] mb-8 overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-2">
+                                    <img alt="SREEHARI J"
+                                        class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="Assets/Sreehari Image.jpeg"
+                                        onerror="this.src='https://ui-avatars.com/api/?name=Sreehari+J&background=3b82f6&color=fff&size=512'" />
+                                </div>
+                                <h4 class="text-white text-xl font-bold tracking-tight">SREEHARI J</h4>
+                                <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Founder and
+                                    CEO</p>
+                                <p class="text-slate-400 text-sm leading-relaxed px-4">Architecting the future of
+                                    enterprise knowledge intelligence.</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="relative w-full aspect-[4/5] mb-8 overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-2">
+                                    <img alt="KOMAL G GOWDA"
+                                        class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="Assets/komalimage.jpeg"
+                                        onerror="this.src='https://ui-avatars.com/api/?name=Komal+G+Gowda&background=8b5cf6&color=fff&size=512'" />
+                                </div>
+                                <h4 class="text-white text-xl font-bold tracking-tight">KOMAL G GOWDA</h4>
+                                <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">CTO</p>
+                                <p class="text-slate-400 text-sm leading-relaxed px-4">Pioneering robust vector database
+                                    optimization and AI architectures.</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="relative w-full aspect-[4/5] mb-8 overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-2">
+                                    <img alt="ADHOKSHAJA S"
+                                        class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1200"
+                                        onerror="this.src='https://ui-avatars.com/api/?name=Adhokshaja+S&background=0f172a&color=fff&size=512'" />
+                                </div>
+                                <h4 class="text-white text-xl font-bold tracking-tight">ADHOKSHAJA S</h4>
+                                <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Chief
+                                    Advisor</p>
+                                <p class="text-slate-400 text-sm leading-relaxed px-4">Guiding product strategy,
+                                    operations, and global deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 lg:px-40 py-24 bg-navy-deep border-y border-white/5 relative overflow-hidden">
+                    <div class="max-w-[900px] mx-auto text-center flex flex-col items-center gap-10 relative z-10">
+                        <h2 class="text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight">Ready to
+                            activate your <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">enterprise
+                                brain</span>?</h2>
+                        <p class="text-slate-300 text-xl max-w-2xl">Join the front line of the cognitive revolution.
+                            We're hiring across all engineering and product disciplines.</p>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <button
+                                class="bg-primary text-white font-bold py-4 px-10 rounded-xl hover:brightness-110 shadow-lg shadow-primary/20 transition-all">View
+                                Open Roles</button>
+                            <button
+                                class="bg-transparent border border-white/20 text-white font-bold py-4 px-10 rounded-xl hover:bg-white/5 transition-colors">Speak
+                                with Sales</button>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none">
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-dark-charcoal border-t border-white/5 py-24 px-6">
+                <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
+                    <div class="col-span-2 lg:col-span-2 space-y-8">
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                            <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                        </div>
+                        <p class="text-slate-500 text-base max-w-xs leading-relaxed">The industrial knowledge platform
+                            for
+                            the next generation of business intelligence.</p>
+                        <div class="flex gap-4">
+                            <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
+                            <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">rss_feed</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="font-bold text-white text-sm uppercase tracking-widest">Platform</h5>
+                        <ul class="space-y-4 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="#">Neural Engine</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Connectors</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Security Stack</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">API Docs</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="font-bold text-white text-sm uppercase tracking-widest">Solutions</h5>
+                        <ul class="space-y-4 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="#">Retail AI</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Manufacturing</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Legal Intelligence</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Financial</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="font-bold text-white text-sm uppercase tracking-widest">Company</h5>
+                        <ul class="space-y-4 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="max-w-7xl mx-auto pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-xs text-slate-500 tracking-widest uppercase font-bold">
+                    <p>© 2024 ASKLayer Engineering. Built for scale.</p>
+                    <div class="flex gap-10">
+                        <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
+                        <a class="hover:text-white transition-colors" href="#">Compliance</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

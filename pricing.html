@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ASKLayer Pricing | AI Business Assistants</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f46e5",
+                        "slate-bg": "#0f172a",
+                        "charcoal": "#1e293b",
+                        "accent-glow": "#818cf8"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+        }
+        .pro-card-glow {
+            position: relative;
+        }
+        .pro-card-glow::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #4f46e5, #818cf8, #c084fc, #4f46e5);
+            border-radius: 1rem;
+            z-index: -1;
+            opacity: 0.75;
+            filter: blur(2px);
+        }
+        .zebra-stripe tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-slate-bg text-slate-100 antialiased selection:bg-primary/30">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="sticky top-0 z-50 w-full border-b border-white/5 bg-dark-charcoal/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="home.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                    <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="home.html">Home</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="product.html">Product</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="pricing.html">Pricing</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="contactus.html">Contact Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="login.html"
+                        class="hidden sm:inline-flex text-sm font-bold px-4 py-2 text-slate-300 hover:text-white">Log
+                        In</a>
+                    <a href="signup.html"
+                        class="inline-flex items-center justify-center gradient-glow text-white text-sm font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-all">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </header>
+            <main class="flex flex-1 flex-col items-center">
+                <div class="layout-content-container flex flex-col max-w-[1200px] w-full px-6 md:px-10 py-16 md:py-24">
+                    <div class="text-center mb-20 max-w-3xl mx-auto">
+                        <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6">
+                            Scalable intelligence for <span class="text-primary">modern business</span>.
+                        </h1>
+                        <p class="text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
+                            No hidden fees. No complex contracts. Choose the plan that fits your growth and deploy your
+                            first AI assistant in minutes.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 items-stretch">
+                        <div
+                            class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-charcoal/40 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-white/20">
+                            <div class="flex flex-col gap-4">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-slate-300 text-sm font-bold uppercase tracking-widest">Starter</h3>
+                                </div>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-white text-5xl font-black tracking-tight">$49</span>
+                                    <span class="text-slate-500 text-base font-medium">/mo</span>
+                                </div>
+                                <p class="text-sm text-slate-400">Essential tools for individual creators and small
+                                    prototypes.</p>
+                            </div>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-white/5 border border-white/10 text-white text-sm font-bold transition-all hover:bg-white/10">
+                                Start 14-day Trial
+                            </button>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    5 AI Assistants
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    10,000 monthly messages
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Standard Knowledge Base
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Email Support
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="pro-card-glow flex flex-col gap-8 rounded-2xl bg-charcoal p-8 shadow-[0_20px_50px_rgba(79,70,229,0.15)] relative transform md:scale-105 z-10 border border-white/5">
+                            <div
+                                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[11px] uppercase tracking-widest font-black px-6 py-1.5 rounded-full shadow-lg">
+                                Most Popular
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-indigo-300 text-sm font-bold uppercase tracking-widest">Professional
+                                </h3>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-white text-5xl font-black tracking-tight">$149</span>
+                                    <span class="text-slate-500 text-base font-medium">/mo</span>
+                                </div>
+                                <p class="text-sm text-slate-300">Comprehensive solution for scaling startups and teams.
+                                </p>
+                            </div>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-indigo-500 hover:shadow-lg hover:shadow-primary/30">
+                                Get Started Now
+                            </button>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-3 text-sm text-white">
+                                    <span class="material-symbols-outlined text-indigo-400 text-xl">check_circle</span>
+                                    Unlimited AI Assistants
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-white">
+                                    <span class="material-symbols-outlined text-indigo-400 text-xl">check_circle</span>
+                                    50,000 monthly messages
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-white">
+                                    <span class="material-symbols-outlined text-indigo-400 text-xl">check_circle</span>
+                                    Advanced API Access
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-white">
+                                    <span class="material-symbols-outlined text-indigo-400 text-xl">check_circle</span>
+                                    Priority Support
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-white">
+                                    <span class="material-symbols-outlined text-indigo-400 text-xl">check_circle</span>
+                                    Custom Knowledge Graph
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-charcoal/40 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-white/20">
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-slate-300 text-sm font-bold uppercase tracking-widest">Enterprise</h3>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-white text-4xl font-black tracking-tight">Custom</span>
+                                </div>
+                                <p class="text-sm text-slate-400">Built for scale, security, and complex organizational
+                                    needs.</p>
+                            </div>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-white text-slate-900 text-sm font-bold transition-all hover:bg-slate-200">
+                                Contact Sales
+                            </button>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Unlimited Everything
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Dedicated Account Manager
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Single Sign-On (SSO)
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    SOC2 &amp; Advanced Security
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-12">
+                        <div class="text-center">
+                            <h2 class="text-white text-3xl font-bold tracking-tight">Feature Comparison</h2>
+                            <p class="text-slate-500 mt-3 text-lg">Compare all capabilities and find the best fit</p>
+                        </div>
+                        <div
+                            class="overflow-hidden rounded-2xl border border-white/10 bg-charcoal/20 backdrop-blur-md shadow-2xl">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr class="bg-charcoal/80 border-b border-white/10">
+                                            <th
+                                                class="px-8 py-6 text-sm font-bold text-slate-200 uppercase tracking-widest">
+                                                Features</th>
+                                            <th
+                                                class="px-8 py-6 text-sm font-bold text-slate-200 uppercase tracking-widest">
+                                                Starter</th>
+                                            <th
+                                                class="px-8 py-6 text-sm font-bold text-indigo-300 uppercase tracking-widest">
+                                                Pro</th>
+                                            <th
+                                                class="px-8 py-6 text-sm font-bold text-slate-200 uppercase tracking-widest">
+                                                Enterprise</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="zebra-stripe">
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">Monthly Messages</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">10,000</td>
+                                            <td class="px-8 py-5 text-sm text-white font-medium">50,000</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">Unlimited</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">AI Assistants</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">5</td>
+                                            <td class="px-8 py-5 text-sm text-white font-medium">Unlimited</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">Unlimited</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">Knowledge Sources
+                                            </td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">10</td>
+                                            <td class="px-8 py-5 text-sm text-white font-medium">Unlimited</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">Unlimited</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">API Access</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">—</td>
+                                            <td class="px-8 py-5 text-sm text-indigo-400"><span
+                                                    class="material-symbols-outlined">check_circle</span></td>
+                                            <td class="px-8 py-5 text-sm text-indigo-400"><span
+                                                    class="material-symbols-outlined">check_circle</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">Support Response</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">48h</td>
+                                            <td class="px-8 py-5 text-sm text-white font-medium">4h Priority</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">Instant (Dedicated)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">Custom Branding</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">—</td>
+                                            <td class="px-8 py-5 text-sm text-indigo-400"><span
+                                                    class="material-symbols-outlined">check_circle</span></td>
+                                            <td class="px-8 py-5 text-sm text-indigo-400"><span
+                                                    class="material-symbols-outlined">check_circle</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-8 py-5 text-sm font-semibold text-white">SSO / SAML</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">—</td>
+                                            <td class="px-8 py-5 text-sm text-slate-400">—</td>
+                                            <td class="px-8 py-5 text-sm text-indigo-400"><span
+                                                    class="material-symbols-outlined">check_circle</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-32 max-w-4xl mx-auto">
+                        <div class="text-center mb-16">
+                            <h3 class="text-2xl font-bold text-white">Common Questions</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                            <div class="group">
+                                <h4
+                                    class="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                                    Can I change plans later?</h4>
+                                <p class="text-slate-400 leading-relaxed">Yes, you can upgrade or downgrade your plan at
+                                    any time. Changes take effect at the start of your next billing cycle, and we
+                                    pro-rate any differences.</p>
+                            </div>
+                            <div class="group">
+                                <h4
+                                    class="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                                    How is a "Knowledge Source" defined?</h4>
+                                <p class="text-slate-400 leading-relaxed">A knowledge source can be a PDF, a Word
+                                    document, a website URL, or a database connection. Each unique file or link counts
+                                    as one source.</p>
+                            </div>
+                            <div class="group">
+                                <h4
+                                    class="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                                    Is my data secure?</h4>
+                                <p class="text-slate-400 leading-relaxed">Absolutely. We use enterprise-grade encryption
+                                    and do not use your private business data to train our foundational models.</p>
+                            </div>
+                            <div class="group">
+                                <h4
+                                    class="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                                    Do you offer annual discounts?</h4>
+                                <p class="text-slate-400 leading-relaxed">Yes, choosing annual billing gives you 2
+                                    months free (approx. 17% discount) on any of our paid plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-dark-charcoal border-t border-white/5 py-24 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
+                <div class="col-span-2 lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                        <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                    </div>
+                    <p class="text-slate-500 text-base max-w-xs leading-relaxed">The industrial knowledge platform for
+                        the next generation of business intelligence.</p>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">rss_feed</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Platform</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Neural Engine</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Connectors</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Security Stack</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">API Docs</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Solutions</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Retail AI</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Manufacturing</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Legal Intelligence</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Financial</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Company</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-xs text-slate-500 tracking-widest uppercase font-bold">
+                <p>© 2024 ASKLayer Engineering. Built for scale.</p>
+                <div class="flex gap-10">
+                    <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
+                    <a class="hover:text-white transition-colors" href="#">Compliance</a>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

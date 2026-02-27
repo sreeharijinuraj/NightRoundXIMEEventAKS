@@ -1,0 +1,383 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ASKLayer Product &amp; Technology | Premium Dark Mode</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#020617] text-slate-300;
+            }
+        }
+        @layer components {
+            .glass-card {
+                @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+            }
+            .glow-icon {
+                @apply shadow-[0_0_20px_rgba(59,130,246,0.5)] border-blue-500/50;
+            }
+            .glow-line {
+                @apply shadow-[0_0_15px_rgba(139,92,246,0.6)];
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400;
+            }
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6",
+                        "secondary": "#8b5cf6",
+                        "dark-navy": "#020617",
+                        "deep-slate": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <div
+            class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10">
+        </div>
+        <div
+            class="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none -z-10">
+        </div>
+        <header class="sticky top-0 z-50 w-full border-b border-white/5 bg-dark-charcoal/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="home.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                    <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="home.html">Home</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="product.html">Product</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="pricing.html">Pricing</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="contactus.html">Contact Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="login.html"
+                        class="hidden sm:inline-flex text-sm font-bold px-4 py-2 text-slate-300 hover:text-white">Log
+                        In</a>
+                    <a href="signup.html"
+                        class="inline-flex items-center justify-center gradient-glow text-white text-sm font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-all">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="mx-auto max-w-7xl px-6 py-20 md:py-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-10">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-400">
+                            <span class="material-symbols-outlined text-sm">bolt</span>
+                            Enterprise RAG Engine
+                        </div>
+                        <h1
+                            class="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-white font-display">
+                            A Simple Idea Behind <br /><span class="text-gradient">Business Intelligence</span>
+                        </h1>
+                        <p class="text-xl text-slate-400 leading-relaxed max-w-xl">
+                            Transform fragmented business documents into a unified, high-performance vector database.
+                            Our proprietary RAG pipeline ensures your AI assistants are grounded, accurate, and secure.
+                        </p>
+                        <div class="flex flex-wrap gap-5">
+                            <button
+                                class="bg-white text-dark-navy font-extrabold px-10 py-4 rounded-2xl shadow-xl hover:bg-slate-200 transition-all flex items-center gap-2">
+                                View Technical Docs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                            <button
+                                class="border border-white/10 bg-white/5 font-extrabold px-10 py-4 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all text-white">
+                                Watch Workflow Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-square rounded-[3rem] bg-deep-slate shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 overflow-hidden group"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7PFwvAtAzx8vhcFmvC10KsDTKAO80JPgLuAhRlZSDSwlE-DiiUL1Iplv_RZmE5rqwgnr1_kUMCjlnWnBl1k475SDUZ7_UR7Lxe6wcKlCwsQwMjjIB3dbQrkgxgo15mEtX1VqzLuLsBjWMfllt19LUn63hu5LJtLAhvdrrstNs7Mwmq81m9gilOmt7U8zT2rhNJkWaw4zpbRjWicM8pplVVPSye0EP2sSZ6Rs2gh2q2Lh-DLQieJUj1BM1YjVrBTFraXrXl51PwBI'); background-size: cover; background-position: center;">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-dark-navy/60 via-transparent to-transparent">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 glass-card p-8 rounded-3xl max-w-[280px]">
+                            <div class="flex items-center gap-3 mb-4 text-blue-400">
+                                <span class="material-symbols-outlined">verified</span>
+                                <span class="text-sm font-bold tracking-widest uppercase">Accuracy Rank</span>
+                            </div>
+                            <div class="text-5xl font-extrabold text-white mb-2">99.4%</div>
+                            <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-[99.4%]"></div>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-4 leading-relaxed italic">Contextual retrieval precision
+                                across enterprise data silos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-deep-slate/40 py-28 border-y border-white/5 relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none">
+                </div>
+                <div class="mx-auto max-w-7xl px-6 relative z-10">
+                    <div class="text-center max-w-3xl mx-auto mb-20">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display">The Ingestion
+                            Pipeline</h2>
+                        <p class="text-slate-400 text-lg">Our high-speed ingestion architecture converts unstructured
+                            chaos into structured enterprise intelligence.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                        <div
+                            class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent glow-line">
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="h-24 w-24 mx-auto rounded-3xl bg-dark-navy border border-white/10 shadow-2xl flex items-center justify-center mb-8 group-hover:glow-icon group-hover:border-blue-500 transition-all duration-500 relative z-10">
+                                <span
+                                    class="material-symbols-outlined text-blue-400 text-4xl group-hover:scale-110 transition-transform">upload_file</span>
+                            </div>
+                            <h3 class="text-center font-bold text-xl text-white mb-3">Ingestion</h3>
+                            <p class="text-center text-sm text-slate-500 leading-relaxed px-4">PDF, Cloud Docs, and Live
+                                API feeds streamed in real-time.</p>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="h-24 w-24 mx-auto rounded-3xl bg-dark-navy border border-white/10 shadow-2xl flex items-center justify-center mb-8 group-hover:glow-icon group-hover:border-purple-500 transition-all duration-500 relative z-10">
+                                <span
+                                    class="material-symbols-outlined text-purple-400 text-4xl group-hover:scale-110 transition-transform">content_cut</span>
+                            </div>
+                            <h3 class="text-center font-bold text-xl text-white mb-3">Chunking</h3>
+                            <p class="text-center text-sm text-slate-500 leading-relaxed px-4">Recursive semantic
+                                splitting with dynamic context windowing.</p>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="h-24 w-24 mx-auto rounded-3xl bg-dark-navy border border-white/10 shadow-2xl flex items-center justify-center mb-8 group-hover:glow-icon group-hover:border-indigo-500 transition-all duration-500 relative z-10">
+                                <span
+                                    class="material-symbols-outlined text-indigo-400 text-4xl group-hover:scale-110 transition-transform">memory</span>
+                            </div>
+                            <h3 class="text-center font-bold text-xl text-white mb-3">Embedding</h3>
+                            <p class="text-center text-sm text-slate-500 leading-relaxed px-4">Dense vector conversion
+                                using state-of-the-art LLM models.</p>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="h-24 w-24 mx-auto rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 shadow-[0_0_30px_rgba(37,99,235,0.4)] flex items-center justify-center mb-8 relative z-10 border border-white/20">
+                                <span class="material-symbols-outlined text-white text-4xl">database</span>
+                            </div>
+                            <h3 class="text-center font-bold text-xl text-white mb-3">Vector Store</h3>
+                            <p class="text-center text-sm text-slate-500 leading-relaxed px-4">Instant retrieval via
+                                high-concurrency vector database.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mx-auto max-w-7xl px-6 py-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-blue-500/20 transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-8 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">auto_stories</span>
+                        </div>
+                        <h4 class="font-bold text-2xl text-white mb-4">Multi-doc Ingestion</h4>
+                        <p class="text-slate-400 leading-relaxed">Synthesize knowledge across vast repositories of
+                            mixed-format documentation with zero latency.</p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-purple-500/20 transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-8 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">manage_search</span>
+                        </div>
+                        <h4 class="font-bold text-2xl text-white mb-4">Semantic Search</h4>
+                        <p class="text-slate-400 leading-relaxed">Go beyond keywords. Find exactly what you need based
+                            on the underlying intent and business context.</p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-indigo-500/20 transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-8 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">forum</span>
+                        </div>
+                        <h4 class="font-bold text-2xl text-white mb-4">Chat Interface</h4>
+                        <p class="text-slate-400 leading-relaxed">Conversational AI that provides verifiable citations
+                            for every answer, ensuring full transparency.</p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-emerald-500/20 transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-8 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">admin_panel_settings</span>
+                        </div>
+                        <h4 class="font-bold text-2xl text-white mb-4">Role-based Access</h4>
+                        <p class="text-slate-400 leading-relaxed">Enterprise-grade security controls. Knowledge access
+                            is strictly governed by user permissions.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="mx-auto max-w-7xl px-6 py-20">
+                <div
+                    class="rounded-[3rem] bg-[#0a0f1d] border border-white/10 p-12 md:p-24 relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 opacity-20 pointer-events-none"
+                        style="background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px); background-size: 32px 32px;">
+                    </div>
+                    <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-blue-600/10 blur-[150px] rounded-full">
+                    </div>
+                    <div class="relative z-10">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-20 font-display">Future Plans
+                        </h2>
+                        <div class="space-y-0 relative">
+                            <div
+                                class="absolute left-[11px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-blue-500 via-purple-500 to-transparent">
+                            </div>
+                            <div class="flex gap-12 group pb-16">
+                                <div class="relative z-10 pt-1">
+                                    <div
+                                        class="h-6 w-6 rounded-full border-4 border-blue-500 bg-dark-navy shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-transform group-hover:scale-125">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-blue-400 font-extrabold text-xs tracking-[0.2em] uppercase mb-3 block">Available
+                                        Now</span>
+                                    <h4 class="text-2xl font-bold text-white mb-3">Core RAG Engine v2.0</h4>
+                                    <p class="text-slate-400 text-base max-w-xl leading-relaxed">Major performance
+                                        upgrades: sub-100ms retrieval and advanced OCR for complex multi-column document
+                                        structures.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-12 group pb-16">
+                                <div class="relative z-10 pt-1">
+                                    <div
+                                        class="h-6 w-6 rounded-full border-4 border-slate-700 bg-dark-navy group-hover:border-purple-500 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all group-hover:scale-125">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-slate-500 font-extrabold text-xs tracking-[0.2em] uppercase mb-3 block">Coming
+                                        Q4 2024</span>
+                                    <h4 class="text-2xl font-bold text-white/90 mb-3">Multimodal Image Search</h4>
+                                    <p class="text-slate-400 text-base max-w-xl leading-relaxed">Native visual
+                                        reasoning. Ask questions about diagrams, flowcharts, and technical blueprints
+                                        directly from your documents.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-12 group">
+                                <div class="relative z-10 pt-1">
+                                    <div
+                                        class="h-6 w-6 rounded-full border-4 border-slate-700 bg-dark-navy group-hover:border-indigo-500 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.5)] transition-all group-hover:scale-125">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-slate-500 font-extrabold text-xs tracking-[0.2em] uppercase mb-3 block">Q1
+                                        2025</span>
+                                    <h4 class="text-2xl font-bold text-white/90 mb-3">Headless API &amp; Webhooks</h4>
+                                    <p class="text-slate-400 text-base max-w-xl leading-relaxed">Full developer suite
+                                        for deep integration. Build custom knowledge workflows with our robust REST APIs
+                                        and event-driven webhooks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark-charcoal border-t border-white/5 py-24 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
+                <div class="col-span-2 lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl font-bold neon-stroke">layers</span>
+                        <h2 class="text-xl font-black tracking-tight text-white uppercase italic">ASKLayer</h2>
+                    </div>
+                    <p class="text-slate-500 text-base max-w-xs leading-relaxed">The industrial knowledge platform for
+                        the next generation of business intelligence.</p>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                        <a class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">rss_feed</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Platform</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Neural Engine</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Connectors</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Security Stack</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">API Docs</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Solutions</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Retail AI</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Manufacturing</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Legal Intelligence</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Financial</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest">Company</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-xs text-slate-500 tracking-widest uppercase font-bold">
+                <p>© 2024 ASKLayer Engineering. Built for scale.</p>
+                <div class="flex gap-10">
+                    <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
+                    <a class="hover:text-white transition-colors" href="#">Compliance</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    ```
+</body>
+
+</html>
