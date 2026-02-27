@@ -129,36 +129,36 @@
                             to help you build your custom AI assistant.
                         </p>
                     </div>
-                    <form class="flex flex-col gap-5">
+                    <form id="contactForm" class="flex flex-col gap-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <label class="flex flex-col gap-2">
                                 <span class="text-slate-200 text-sm font-semibold">First Name</span>
-                                <input
+                                <input id="firstName" required
                                     class="w-full rounded-lg border-slate-700 bg-slate-900/50 text-white focus-glow h-12 px-4 text-base transition-all duration-300"
                                     placeholder="Jane" type="text" />
                             </label>
                             <label class="flex flex-col gap-2">
                                 <span class="text-slate-200 text-sm font-semibold">Last Name</span>
-                                <input
+                                <input id="lastName" required
                                     class="w-full rounded-lg border-slate-700 bg-slate-900/50 text-white focus-glow h-12 px-4 text-base transition-all duration-300"
                                     placeholder="Doe" type="text" />
                             </label>
                         </div>
                         <label class="flex flex-col gap-2">
                             <span class="text-slate-200 text-sm font-semibold">Business Email</span>
-                            <input
+                            <input id="email" required
                                 class="w-full rounded-lg border-slate-700 bg-slate-900/50 text-white focus-glow h-12 px-4 text-base transition-all duration-300"
                                 placeholder="jane@company.com" type="email" />
                         </label>
                         <label class="flex flex-col gap-2">
                             <span class="text-slate-200 text-sm font-semibold">Company Name</span>
-                            <input
+                            <input id="company" required
                                 class="w-full rounded-lg border-slate-700 bg-slate-900/50 text-white focus-glow h-12 px-4 text-base transition-all duration-300"
                                 placeholder="Acme Corp" type="text" />
                         </label>
                         <label class="flex flex-col gap-2">
                             <span class="text-slate-200 text-sm font-semibold">How can we help?</span>
-                            <textarea
+                            <textarea id="message" required
                                 class="w-full rounded-lg border-slate-700 bg-slate-900/50 text-white focus-glow p-4 text-base transition-all duration-300"
                                 placeholder="Tell us about your project..." rows="4"></textarea>
                         </label>
@@ -168,6 +168,52 @@
                             Send Message
                         </button>
                     </form>
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                            e.preventDefault();
+                            if (!this.checkValidity()) {
+                                this.reportValidity();
+                                return;
+                            }
+
+                            const submitBtn = this.querySelector('button[type="submit"]');
+                            const originalText = submitBtn.innerText;
+                            submitBtn.innerText = 'Sending...';
+                            submitBtn.disabled = true;
+
+                            const formData = {
+                                firstName: document.getElementById('firstName').value,
+                                lastName: document.getElementById('lastName').value,
+                                email: document.getElementById('email').value,
+                                company: document.getElementById('company').value,
+                                message: document.getElementById('message').value,
+                                submittedAt: new Date().toISOString()
+                            };
+
+                            try {
+                                const response = await fetch('/submit-form', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(formData)
+                                });
+
+                                if (response.ok) {
+                                    alert("Thank you! Your message has been silently saved directly to the Forms folder.");
+                                    this.reset();
+                                } else {
+                                    alert("Error saving form. Please ensure you are running the site via run_website.py.");
+                                }
+                            } catch (error) {
+                                console.error("Submit error:", error);
+                                alert("Error submitting form. Please ensure you are running the site via run_website.py.");
+                            } finally {
+                                submitBtn.innerText = originalText;
+                                submitBtn.disabled = false;
+                            }
+                        });
+                    </script>
                     <div class="pt-8 border-t border-slate-800 flex flex-col gap-4">
                         <p class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">Direct Contact</p>
                         <div class="flex flex-wrap gap-8">
