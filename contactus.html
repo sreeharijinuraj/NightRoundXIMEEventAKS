@@ -45,6 +45,7 @@
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="font-display bg-background-dark text-slate-100 transition-colors duration-200">
@@ -191,7 +192,7 @@
                             };
 
                             try {
-                                const response = await fetch('/submit-form', {
+                                const response = await fetch('submit_contact.php', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json'
@@ -199,15 +200,41 @@
                                     body: JSON.stringify(formData)
                                 });
 
-                                if (response.ok) {
-                                    alert("Thank you! Your message has been silently saved directly to the Forms folder.");
+                                const result = await response.json();
+
+                                if (response.ok && result.status === 'success') {
+                                    Swal.fire({
+                                        title: 'Success!',
+                                        text: 'Thank you! Your message has been safely stored in the database.',
+                                        icon: 'success',
+                                        confirmButtonText: 'OK',
+                                        confirmButtonColor: '#1313ec',
+                                        background: '#121225',
+                                        color: '#fff'
+                                    });
                                     this.reset();
                                 } else {
-                                    alert("Error saving form. Please ensure you are running the site via run_website.py.");
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: result.message || 'Error saving form.',
+                                        icon: 'error',
+                                        confirmButtonText: 'OK',
+                                        confirmButtonColor: '#1313ec',
+                                        background: '#121225',
+                                        color: '#fff'
+                                    });
                                 }
                             } catch (error) {
                                 console.error("Submit error:", error);
-                                alert("Error submitting form. Please ensure you are running the site via run_website.py.");
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'Could not connect to the server. Please ensure XAMPP (Apache & MySQL) is running.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK',
+                                    confirmButtonColor: '#1313ec',
+                                    background: '#121225',
+                                    color: '#fff'
+                                });
                             } finally {
                                 submitBtn.innerText = originalText;
                                 submitBtn.disabled = false;
